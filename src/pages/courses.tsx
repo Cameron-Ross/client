@@ -14,7 +14,7 @@ export function Courses() {
   }, []);
 
   async function getOrganizations() {
-    let url = `http://localhost:3000/organizations`;
+    let url = `https://ceross-demo-server-4c1503ff2ae6.herokuapp.com/organizations`;
     let options: RequestInit = { 
       method: "GET", 
       headers: { 
@@ -28,7 +28,7 @@ export function Courses() {
 
   async function getActiveCourses(organizationID: string) {
     
-    let url = `http://localhost:3000/organizations/${organizationID}/courses?filter=%7B%0A%20%20%22where%22%3A%20%7B%0A%20%20%20%20%22status%22%3A%20%22Active%22%0A%20%20%7D%0A%7D`;
+    let url = `https://ceross-demo-server-4c1503ff2ae6.herokuapp.com/organizations/${organizationID}/courses?filter=%7B%0A%20%20%22where%22%3A%20%7B%0A%20%20%20%20%22status%22%3A%20%22Active%22%0A%20%20%7D%0A%7D`;
     let options: RequestInit = { 
       method: "GET", 
       headers: { 
